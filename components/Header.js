@@ -1,34 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Header = styled.header`
-    padding: 15px 0;
-    margin-bottom: 40px;
-
-    nav {
-        text-align: center;
-    }
-
-    .menu-links ul { 
-        list-style: none;
-        display: flex;
-        justify-content: center;
-    }
-
-    .menu-links li {
-        margin: 0 20px;
-        cursor: pointer;
-        font-family: "Montserrat",sans-serif;
-
-        &:hover {
-            color: #FF0000;
-        }
-    }
-`
+//import styled from 'styled-components';
 
 function HeaderComponent({ }) {
     return (
-        <Header>
+        <header>
             <nav>
                 <div className="menu-links">
                     <ul>
@@ -39,7 +14,34 @@ function HeaderComponent({ }) {
                     </ul>
                 </div>
             </nav>
-        </Header>
+
+            <style jsx>{`
+                header {
+                    padding: 15px 0;
+                    margin-bottom: 40px;
+                }
+                
+                header nav{
+                    text-align: center;
+                }
+
+                header ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                header li {
+                    margin: 0 20px;
+                    cursor: pointer;
+                    font-family: "Montserrat",sans-serif;
+                }
+
+                header li:hover {
+                    color: #FF0000;
+                }
+            `}</style>
+        </header>
     )
 }
 
